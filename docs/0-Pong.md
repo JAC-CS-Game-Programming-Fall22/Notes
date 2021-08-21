@@ -24,7 +24,7 @@ Photo taken from [Wikipedia](https://upload.wikimedia.org/wikipedia/commons/thum
 
 ## 📥 Downloading Demo Code
 
-Be sure to download the code for today's lecture, which you can find [here](https://github.com/JAC-CS-Game-Programming-F21/Notes/tree/master/src/0-Pong).
+Be sure to download the code for today's lecture, which you can find [here](https://github.com/JAC-CS-Game-Programming-F21/Notes/tree/master/src/0-pong).
 This should make it easier to follow along without having to focus on matching every keystroke in real time.
 
 ## ➰ What is a game loop?
