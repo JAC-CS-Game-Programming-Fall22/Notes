@@ -12,7 +12,7 @@
 
 ### Downloading Demo Code
 
-Be sure to download the code for today's lecture, which you can find [here](https://github.com/VikramSinghMTL/420-5P6-Game-Programming-F21).
+Be sure to download the code for today's lecture, which you can find [here](https://github.com/JAC-CS-Game-Programming-F21/Notes/tree/master/src/0-pong).
 This should make it easier to follow along without having to focus on matching every keystroke in real time.
 
 ### What is a game loop?
