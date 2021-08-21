@@ -18,9 +18,9 @@ We are aiming to recreate "Pong"; a simple 2 player game in which one player has
 - At that point, we'll want to add sound effects for when the ball hits paddles and walls, and for when a point is scored.
 - Lastly, we'll display the score on the screen so that the players don't have to remember it during the game.
 
-![Pong](images/2021-08-21-11-37-40.png)
+![Pong](images/Pong.png)
 
-Photo taken from [Wikipedia](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Pong.png/480px-Pong.png)
+_Image courtesy of [Wikipedia](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Pong.png/480px-Pong.png)_
 
 ## 📥 Downloading Demo Code
 
@@ -35,9 +35,9 @@ A game, fundamentally, is an infinite loop, like a `while(true)`. During every i
 2. Second, we need to respond to that input from the previous step by updating anything in the game that depends on that input (i.e., tracking movement, detecting collisions, etc.).
 3. Third, we need to re-render anything that was updated in the previous step, so that the user can see visually on the screen that the game has changed and feel a sense of interactivity.
 
-![Game Loop](images/2021-08-16-15-08-26.png)
+![Game Loop](images/Game-Loop.png)
 
-Photo taken from [Game Programming Patterns](gameprogrammingpatterns.com/game-loop.html), where you can read more about game loops.
+_Image courtesy of [Game Programming Patterns](gameprogrammingpatterns.com/game-loop.html), where you can read more about game loops._
 
 ## 📉 2D Coordinate System
 
@@ -45,9 +45,9 @@ In the context of 2D games, the most fundamental way of looking at the world is 
 
 Slightly different from the traditional coordinate system you might've used in Math class, the 2D coordinate system we're referring to here is a system in which objects have an X and Y coordinate (X, Y) and are drawn accordingly, with (0,0) being the top-left of the system. This means positive directions moving down and to the right, while negative directions move up and to the left.
 
-![Coordinate System](images/2021-08-20-13-44-59.png)
+![Coordinate System](images/2D-Coordinate-System.png)
 
-Photo taken from [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes).
+_Image courtesy of [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)._
 
 ## 🌅 Pong-0 ("The Day-0 Update")
 
