@@ -1,6 +1,6 @@
-# Lecture 0: Pong
+# 🏓 Pong
 
-## Today's Topics
+## 🎯 Objectives
 
 - **HTML5 Canvas w/ JS**: This is the programming language that we'll be using throughout the course. You should be familiar with the HTML5 `<canvas>` element from Web I.
 - **Drawing Shapes and Text**: Two of the most basic principles of game development, being able to draw shapes and text is what will allow us to render our game on a screen.
@@ -10,12 +10,24 @@
 - **Box Collision (Hitboxes)**: Understanding the concept of box collision will be necessary in order to bring Pong to life, since we'll need to be able to "bounce" a ball back and forth between two paddles. The ball and paddles will be rectangular, so we'll focus on "Axis-Aligned Bounding Boxes," which will allow us to calculate collisions.
 - **Sound Effects (with bfxr)**: Lastly, we'll learn how to polish up our game with sound effects in order to make it more exciting and immersive.
 
-### Downloading Demo Code
+We are aiming to recreate "Pong"; a simple 2 player game in which one player has a paddle on the left side of the screen, the other player has a paddle on the right side of the screen, and the first player to score 10 times on their opponent wins. A player scores by getting the ball past the opponent's paddle and into their "goal" (i.e., the edge of the screen).
 
-Be sure to download the code for today's lecture, which you can find [here](https://github.com/JAC-CS-Game-Programming-F21/Notes/tree/master/src/0-pong).
+- First off, we'll want to draw shapes to the screen (e.g., paddles and ball) so that the user can see the game.
+- Next, we'll want to control the 2D position of the paddles based on input, and implement collision detection between the paddles and ball so that each player can deflect the ball back toward their opponent.
+- We'll also need to implement collision detection between the ball and screen boundaries to keep the ball within the vertical bounds of the screen and to detect scoring events (outside horizontal bounds).
+- At that point, we'll want to add sound effects for when the ball hits paddles and walls, and for when a point is scored.
+- Lastly, we'll display the score on the screen so that the players don't have to remember it during the game.
+
+![Pong](images/2021-08-21-11-37-40.png)
+
+Photo taken from [Wikipedia](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Pong.png/480px-Pong.png)
+
+## 📥 Downloading Demo Code
+
+Be sure to download the code for today's lecture, which you can find [here](https://github.com/JAC-CS-Game-Programming-F21/Notes/tree/master/src/0-Pong).
 This should make it easier to follow along without having to focus on matching every keystroke in real time.
 
-### What is a game loop?
+## ➰ What is a game loop?
 
 A game, fundamentally, is an infinite loop, like a `while(true)`. During every iteration of that loop, we're repeatedly performing the following set of steps:
 
@@ -27,7 +39,7 @@ A game, fundamentally, is an infinite loop, like a `while(true)`. During every i
 
 Photo taken from [Game Programming Patterns](gameprogrammingpatterns.com/game-loop.html), where you can read more about game loops.
 
-### 2D Coordinate System
+## 📉 2D Coordinate System
 
 In the context of 2D games, the most fundamental way of looking at the world is by using the 2D coordinate system.
 
@@ -37,27 +49,13 @@ Slightly different from the traditional coordinate system you might've used in M
 
 Photo taken from [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes).
 
-### Today's Goal
-
-We are aiming to recreate "Pong"; a simple 2 player game in which one player has a paddle on the left side of the screen, the other player has a paddle on the right side of the screen, and the first player to score 10 times on their opponent wins. A player scores by getting the ball past the opponent's paddle and into their "goal" (i.e., the edge of the screen).
-
-![Pong](images/2021-08-16-15-14-01.png)
-
-### Lecture's Scope
-
-- First off, we'll want to draw shapes to the screen (e.g., paddles and ball) so that the user can see the game.
-- Next, we'll want to control the 2D position of the paddles based on input, and implement collision detection between the paddles and ball so that each player can deflect the ball back toward their opponent.
-- We'll also need to implement collision detection between the ball and screen boundaries to keep the ball within the vertical bounds of the screen and to detect scoring events (outside horizontal bounds).
-- At that point, we'll want to add sound effects for when the ball hits paddles and walls, and for when a point is scored.
-- Lastly, we'll display the score on the screen so that the players don't have to remember it during the game.
-
-### 🌅 pong-0 ("The Day-0 Update")
+## 🌅 Pong-0 ("The Day-0 Update")
 
 At this point, you will want to have downloaded the demo code in order to follow along. Be sure to pay attention to the comments in the code!
 
-pong-0 simply prints "Hello Pong!" exactly in the center of the screen. This is not incredibly exciting, but it does showcase how to use HTML5 canvas' most important functions moving forward.
+Pong-0 simply prints "Hello Pong!" exactly in the center of the screen. This is not incredibly exciting, but it does showcase how to use HTML5 canvas' most important functions moving forward.
 
-#### Important Functions
+### Important Functions
 
 - `canvas.getContext('2d')`
   - This function returns a `context` object. The `context` object contains all of the methods we need to draw things to the screen.
@@ -75,7 +73,7 @@ pong-0 simply prints "Hello Pong!" exactly in the center of the screen. This is 
 
 Now, with these puzzle pieces in mind, you can see how we're rendering "Hello Pong!" to the center of the screen:
 
-#### Important Code
+### Important Code
 
 We initialize our game by grabbing the `canvas` element from the DOM located in `index.html` and getting the `context` object from it. Next, we set the width and height of the canvas. Finally, we declare `lastTime` which will be used to calculate delta time later on.
 
@@ -119,11 +117,11 @@ function render() {
 }
 ```
 
-### 🟪 pong-1 ("The Rectangle Update")
+## 🟪 Pong-1 ("The Rectangle Update")
 
-pong-1 produces a more complete, albeit static image of what our Pong program should look like.
+Pong-1 produces a more complete, albeit static image of what our Pong program should look like.
 
-#### Important Functions
+### Important Functions
 
 - `new FontFace(name, path)`
   - This instantiates a new `FontFace` object from a font file that lives on disk.
@@ -132,7 +130,7 @@ pong-1 produces a more complete, albeit static image of what our Pong program sh
 - `context.fillRect(x, y, width, height)`
   - Draws a rectangle onto the screen. The four parameters are its position and size dimensions. This is the cornerstone drawing function of the entirety of our Pong implementation!
 
-#### Important Code
+### Important Code
 
 Alongside `main.js` file and `index.html`, you'll find that we've added a font file to our project called `Joystix.ttf`. This is the "retro" font we'll use to make our Pong game look more authentic.
 
@@ -161,16 +159,16 @@ context.fillRect(canvas.width - 50, canvas.height - 230, 20, 200);
 
 As you can see, we are writing the score at the top of the screen, and drawing rectangles for the paddles and the ball. The paddles are positioned on opposing ends of the screen, and the ball in the center.
 
-### 🏓 pong-2 ("The Paddle Update")
+## 🏓 Pong-2 ("The Paddle Update")
 
-pong-2 adds interactivity to the paddles by letting us move them up and down using the `w` and `s` keys for the left paddle, and the `up` and `down` keys for the right paddle.
+Pong-2 adds interactivity to the paddles by letting us move them up and down using the `w` and `s` keys for the left paddle, and the `up` and `down` keys for the right paddle.
 
-#### Important Functions
+### Important Functions
 
 - `canvas.addEventListener(eventName, function)`
   - This registers an event listener that triggers a callback function that executes whenever we press a key. We will use this to set different keys in our `keys` object to `true` and `false` which will allow us to receive input from the keyboard for our game.
 
-#### Important Code
+### Important Code
 
 You'll notice we've added a new constant near the top of `main.js`:
 
@@ -211,11 +209,11 @@ else if (keys.ArrowDown) {
 
 Here, we've implemented a way for each player to move their paddle. Recall that our 2D coordinate system is centered at the top left of the screen. Therefore, in order for each paddle to move upwards, its Y position will need to be multiplied by negative velocity (and vice versa), which might seem counterintuitive at first glance, so be sure to take a moment to look at this carefully.
 
-### ⚾ pong-3 ("The Ball Update")
+## ⚾ Pong-3 ("The Ball Update")
 
-pong-3 adds motion to the ball upon the user pressing enter.
+Pong-3 adds motion to the ball upon the user pressing enter.
 
-#### Important Functions
+### Important Functions
 
 - `Math.random()`
   - Returns a random number between 0 and 1.
@@ -226,7 +224,7 @@ pong-3 adds motion to the ball upon the user pressing enter.
 - `Math.floor(floatingPointNumber)`
   - Returns the largest integer less than or equal to a given floating point number.
 
-#### Important Code
+### Important Code
 
 You'll see a few new variables near the bottom of load():
 
@@ -298,11 +296,11 @@ context.fillRect(ballX, ballY, 20, 20);
 
 The only change of note is using the ball's position variables to draw the ball to the screen instead of the static values we had before. This will make it appear like the ball is travelling across the screen.
 
-### 📦 pong-4 ("The Class Update")
+## 📦 Pong-4 ("The Class Update")
 
-pong-4 behaves exactly like pong-3. The biggest advantage we gain from this update is in the design of our code. Open up pong-4 to take a look at how we've reorganized the code using classes and objects.
+Pong-4 behaves exactly like Pong-3. The biggest advantage we gain from this update is in the design of our code. Open up Pong-4 to take a look at how we've reorganized the code using classes and objects.
 
-#### JS Modules
+### JS Modules
 
 It is important to understand that all of the JS we are writing here is **client-side**. This means that the code is executed within your web browser. This is different than last semester in Web II where we wrote our code **server-side** which meant that the code was executed within the NodeJS runtime.
 
@@ -324,17 +322,17 @@ Also, we have to make sure that the entrypoint to our application (`main.js`) is
 
 Now, we can instantiate an object of type `Ball` in `main.js`!
 
-#### Important Code
+### Important Code
 
 The main takeaway from this update is that we now have abstracted away from `main.js` the logic relevant to paddle and ball mechanics. These are now in their own classes, so you'll see a few new files in the project directory. `Ball.js` contains all the logic specific to the ball, while `Paddle.js` contains all the logic specific to each paddle.
 
 This not only gives us greater flexibility moving forward, it also makes our `main.js` file cleaner and more readable.
 
-### 🎯 pong-5 ("The Collision Update")
+## 🎯 Pong-5 ("The Collision Update")
 
-pong-5 allows for the ball to bounce off the paddles and window boundaries. Open up pong-5 to take a look at how we've incorporated AABB Collision Detection into our Pong program.
+Pong-5 allows for the ball to bounce off the paddles and window boundaries. Open up Pong-5 to take a look at how we've incorporated AABB Collision Detection into our Pong program.
 
-#### AABB Collision Detection
+### AABB Collision Detection
 
 - AABB Collision Detection relies on all colliding entities to have "axis-aligned bounding boxes", which simply means their collision boxes contain no rotation in our world space, which allows us to use a simple formula to test for collision:
 
@@ -354,7 +352,7 @@ else {
 - We can use AABB Collision Detection to detect whether our ball is colliding with our paddles and react accordingly.
 - We can apply similar logic to detect if the ball collides with a window boundary.
 
-#### Important Code
+### Important Code
 
 Notice how we've added a `didCollide()` function to our `Ball` class. It uses the above algorithm to determine whether there has been a collision, returning `true` if so and `false` otherwise.
 
@@ -387,11 +385,11 @@ if (this.y >= this.canvasHeight - this.height) {
 }
 ```
 
-### 🚨 pong-6 ("The Score Update")
+## 🚨 Pong-6 ("The Score Update")
 
-pong-6 allows us to keep track of the score.
+Pong-6 allows us to keep track of the score.
 
-#### Important Code
+### Important Code
 
 All we need to do is increment the score variables for each player whenever the ball collides with their goal boundary:
 
@@ -408,18 +406,18 @@ else if (ball.x > CANVAS_WIDTH) {
 }
 ```
 
-### ↪️ pong-7 ("The Serve Update")
+## ↪️ Pong-7 ("The Serve Update")
 
-pong-7 introduces a new state, "serve", to our game.
+Pong-7 introduces a new state, "serve", to our game.
 
-#### What is a State Machine?
+### What is a State Machine?
 
 - Currently in our Pong program we've only talked about state a little bit. We have our "start" state, which means the game is ready for us to press "enter" so that the ball will start moving, and our "play" state, which means the game is currently underway.
 - A state machine concerns itself with monitoring what is the current state and what transitions take place between possible states, such that each individual state is produced by a specific transition and has its own logic.
-- In pong-7, we allow a player to "serve" the ball by not having to defend during their first turn.
+- In Pong-7, we allow a player to "serve" the ball by not having to defend during their first turn.
 - We transition from the "play" state to the "serve" state by scoring, and from the "serve" state to the "play" state by pressing enter. The game begins in the "start" state, and transitions to the serve state by pressing enter.
 
-#### Important Code
+### Important Code
 
 We can add our new "serve" state by making an additional condition within our `update()` function:
 
@@ -487,23 +485,23 @@ else if (gameState === 'done') {
 }
 ```
 
-### 🔊 pong-8 ("The Audio Update")
+## 🔊 Pong-8 ("The Audio Update")
 
-pong-8 adds sound to the game
+Pong-8 adds sound to the game
 
-#### Important Functions
+### Important Functions
 
 - `new Audio(path)`
   - This function creates an Audio object that we can play back at any point in our program. You can control the volume and whether or not the file loops (ex. your game's background music).
   - We will use this functionality to play a sound whenever there is a collision and when a player scores.
 
-#### What is bfxr?
+### What is bfxr?
 
 - [bfxr](https://www.bfxr.net/) is a simple program for generating random sounds, freely-available on all major operating systems.
 - We will use it to generate all sound effects for our Pong game and most other games going forward.
-- We've created 3 sound files and stored them in a sub-directory within pong-8.
+- We've created 3 sound files and stored them in a sub-directory within Pong-8.
 
-#### Important Code
+### Important Code
 
 You'll notice in `main.js` and `ball.js` that we've created an object with references to the 3 sound files we've added to our project directory:
 
