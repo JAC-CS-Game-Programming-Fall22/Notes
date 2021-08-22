@@ -45,7 +45,7 @@ _Image courtesy of [Game Programming Patterns](gameprogrammingpatterns.com/game-
 
 In the context of 2D games, the most fundamental way of looking at the world is by using the 2D coordinate system.
 
-Slightly different from the traditional coordinate system you might've used in Math class, the 2D coordinate system we're referring to here is a system in which objects have an X and Y coordinate (X, Y) and are drawn accordingly, with (0,0) being the top-left of the system. This means positive directions moving down and to the right, while negative directions move up and to the left.
+Slightly different from the traditional coordinate system you might've used in Math class, the 2D coordinate system we're referring to here is a system in which objects have an X and Y coordinate (X, Y) and are drawn accordingly, with (0, 0) being the top-left of the system. This means positive directions moving down and to the right, while negative directions move up and to the left.
 
 ![Coordinate System](images/2D-Coordinate-System.png)
 
