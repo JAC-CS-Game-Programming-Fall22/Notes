@@ -443,7 +443,7 @@ if (ball.x < 0) {
 
     if (player2Score === VICTORY_SCORE) {
         winningPlayer = 2;
-        gameState = 'done';
+        gameState = 'victory';
     }
     else {
         ball.reset(CANVAS_WIDTH / 2 - 10, CANVAS_HEIGHT / 2 - 10, servingPlayer);
@@ -456,7 +456,7 @@ else if (ball.x > CANVAS_WIDTH) {
 
     if (player1Score === VICTORY_SCORE) {
         winningPlayer = 1;
-        gameState = 'done';
+        gameState = 'victory';
     }
     else {
         ball.reset(CANVAS_WIDTH / 2 - 10, CANVAS_HEIGHT / 2 - 10, servingPlayer);
@@ -468,7 +468,7 @@ else if (ball.x > CANVAS_WIDTH) {
 When a player reaches the maximum score, the game state transitions to "done" and we produce a victory screen in `render()`:
 
 ```javascript
-else if (gameState === 'done') {
+else if (gameState === 'victory') {
     context.fillText(`🎉 Player ${winningPlayer} wins! 🎉`, canvas.width / 2, canvas.height / 4);
     context.fillText(`Press Enter to restart!`, canvas.width / 2, canvas.height / 4 + 40);
 }
@@ -477,7 +477,7 @@ else if (gameState === 'done') {
 Finally, we add some code to `update()` to transition back to the "serve" state and reset the scores in case the player(s) would like to play again.
 
 ```javascript
-else if (gameState === 'done') {
+else if (gameState === 'victory') {
     gameState = 'serve';
     player1Score = 0;
     player2Score = 0;
