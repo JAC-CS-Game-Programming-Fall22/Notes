@@ -148,7 +148,7 @@ myFont.load().then(function (font) {
 
 This will allow us to create a custom font object (based off the font file we've added to our project directory) that we can set as the active font in our game.
 
-The only other changes to the code in this update can be found in the `draw` function.
+The only other changes to the code in this update can be found in the `render()` function.
 
 ```javascript
 context.fillText(`${player1Score}`, canvas.width * 0.25, 50);
