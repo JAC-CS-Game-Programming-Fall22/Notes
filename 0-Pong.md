@@ -393,10 +393,10 @@ Pong-6 allows us to keep track of the score.
 
 ### Important Code
 
-All we need to do is increment the score variables for each player whenever the ball collides with their goal boundary:
+All we need to do is increment the score variables for each player whenever the ball goes past their goal boundary:
 
 ```javascript
-if (ball.x < 0) {
+if (ball.x + ball.width < 0) {
     player2Score++;
     ball.reset(CANVAS_WIDTH / 2 - 10, CANVAS_HEIGHT / 2 - 10);
     gameState = 'start';
