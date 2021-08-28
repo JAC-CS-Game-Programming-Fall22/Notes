@@ -450,7 +450,7 @@ The idea is that when a player gets scored on, they should get to serve the ball
 We introduce a new state: "victory", and then we set a maximum score (in our case, 10). Within `update()`, we modify our code that checks whether a point has been scored as follows:
 
 ```javascript
-if (ball.x < 0) {
+if (ball.x + ball.width < 0) {
     servingPlayer = 2;
     player2Score++;
 
