@@ -1,0 +1,12 @@
+{
+	"no-inline-html": {
+		"allowed_elements": [
+			"iframe",
+			"a"
+		]
+	},
+	"no-duplicate-heading": {
+		"siblings_only": true
+	},
+	"line-length": false
+}
