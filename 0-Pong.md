@@ -354,6 +354,19 @@ else {
 - We can use AABB Collision Detection to detect whether our ball is colliding with our paddles and react accordingly.
 - We can apply similar logic to detect if the ball collides with a window boundary.
 
+```iframe
+height="537"
+width="100%"
+scrolling="no"
+title="AABB Collision Detection Visualization"
+src="https://codepen.io/vsingh7/embed/powJMYW?default-tab=result"
+frameborder="no"
+loading="lazy"
+allowtransparency="true"
+allowfullscreen="true"
+textContent="See the Pen <a href='https://codepen.io/vsingh7/pen/powJMYW'>AABB Collision Detection Visualization</a> by Vikram Singh (<a href='https://codepen.io/vsingh7'>@vsingh7</a>) on <a href='https://codepen.io'>CodePen</a>."
+```
+
 ### Important Code
 
 Notice how we've added a `didCollide()` function to our `Ball` class. It uses the above algorithm to determine whether there has been a collision, returning `true` if so and `false` otherwise.
@@ -434,7 +447,7 @@ else if (gameState === 'serve') {
 
 The idea is that when a player gets scored on, they should get to serve the ball, so as to not be immediately on defense. We do this by passing the currently serving player to the ball's `reset()` method so that it can set the balls new velocity according to who is serving.
 
-We introduce a new state: "done", and then we set a maximum score (in our case, 10). Within `update()`, we modify our code that checks whether a point has been scored as follows:
+We introduce a new state: "victory", and then we set a maximum score (in our case, 10). Within `update()`, we modify our code that checks whether a point has been scored as follows:
 
 ```javascript
 if (ball.x < 0) {
@@ -465,7 +478,7 @@ else if (ball.x > CANVAS_WIDTH) {
 }
 ```
 
-When a player reaches the maximum score, the game state transitions to "done" and we produce a victory screen in `render()`:
+When a player reaches the maximum score, the game state transitions to "victory" and we produce a victory screen in `render()`:
 
 ```javascript
 else if (gameState === 'victory') {
