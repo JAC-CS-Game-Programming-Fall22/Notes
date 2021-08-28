@@ -502,7 +502,7 @@ else if (gameState === 'victory') {
 
 ## 🔊 Pong-8 ("The Audio Update")
 
-Pong-8 adds sound to the game
+Pong-8 adds sound to the game.
 
 ### Important Functions
 
