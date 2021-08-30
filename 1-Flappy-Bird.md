@@ -679,7 +679,7 @@ Flappy-Bird-10 adds some music and sound effects to the game
 
 ### Important Code
 
-We initialize a sounds object in `globals.js` that includes the sound files we reference in our project directory:
+We initialize a `sounds` object in `globals.js` that includes the sound files we reference in our project directory, and also set the volume of each sound so that we don't blow out our player's ears:
 
 ```javascript
 export const sounds = {
@@ -689,13 +689,18 @@ export const sounds = {
     score: new Audio('./sounds/score.wav'),
     music: new Audio('./sounds/marios_way.mp3'), // https://freesound.org/people/xsgianni/sounds/388079/
 };
+
+sounds.jump.volume = 0.01;
+sounds.explosion.volume = 0.01;
+sounds.hurt.volume = 0.01;
+sounds.score.volume = 0.01;
+sounds.music.volume = 0.01;
+sounds.music.loop = true;
 ```
 
-Then, in `Game.js`, set the music sound to loop indefinitely and begin playing it in the `start()` function:
+Then, in `Game.js`, begin playing it in the `start()` function:
 
 ```javascript
-sounds.music.volume = 0.25;
-sounds.music.loop = true;
 sounds.music.play();
 ```
 
