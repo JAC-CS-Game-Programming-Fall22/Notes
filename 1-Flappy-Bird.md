@@ -144,7 +144,7 @@ export default class Bird {
         this.y = y - height / 2;
     }
 
-    render(context) {
+    render() {
         context.drawImage(images.bird, this.x, this.y)
     }
 }
@@ -257,7 +257,7 @@ export default class Pipe {
         this.x += this.scrollSpeed * dt;
     }
 
-    render(context) {
+    render() {
         context.drawImage(images.pipe, this.x, this.y);
     }
 }
