@@ -23,7 +23,7 @@ _Image courtesy of [MacRumors](https://www.macrumors.com/2014/02/08/flappy-bird-
 3. Open the VSC terminal (`` CTRL + ` ``) and run `npx http-server` (assuming you have NodeJS installed, if you don't, [download and install it from here](https://nodejs.org)) inside the root folder of the repo.
 4. In your browser, navigate to `http://localhost:8080` (or whatever the URL is that is displayed in the terminal).
 
-## 🌅 Flappy-Bird-0 ("The Day-0 Update")
+## 🌅 Flappy-Bird-0 (The "Day-0" Update)
 
 Flappy-Bird-0 simply draws two images to the screen - a foreground and a background.
 
@@ -63,7 +63,7 @@ context.drawImage(images.ground, 0, CANVAS_HEIGHT - images.ground.height, images
 
 The rendering logic, for now, consists of merely drawing our background and group. We draw the background at the top of the screen, and the ground at the bottom.
 
-## 🚞 Flappy-Bird-1 ("The Parallax Update")
+## 🚞 Flappy-Bird-1 (The "Parallax" Update)
 
 Flappy-Bird-1 allows us to "scroll" the background and foreground along the screen to simulate motion.
 
@@ -126,7 +126,7 @@ allowfullscreen="true"
 textContent="See the Pen <a href='https://codepen.io/vsingh7/pen/bGRVrXB'>Parallax Scrolling</a> by Vikram Singh (<a href='https://codepen.io/vsingh7'>@vsingh7</a>) on <a href='https://codepen.io'>CodePen</a>."
 ```
 
-## 🐤 Flappy-Bird-2 ("The Bird Update")
+## 🐤 Flappy-Bird-2 (The "Bird" Update)
 
 Flappy-Bird-2 adds a Bird sprite to our game and renders it in the center of the screen.
 
@@ -178,7 +178,7 @@ this.bird.render();
 
 It's important to declare this only after rendering the scene. Otherwise, the scene would be in front of the bird!
 
-## 🌌 Flappy-Bird-3 ("The Gravity Update")
+## 🌌 Flappy-Bird-3 (The "Gravity" Update)
 
 Flappy-Bird-3 introduces gravity into our game, which causes our Bird to fall off the screen almost immediately.
 
@@ -233,7 +233,7 @@ flap() {
 }
 ```
 
-## ♾️ Flappy-Bird-4 ("The Infinite Pipe Update")
+## ♾️ Flappy-Bird-4 (The "Infinite Pipe" Update)
 
 Flappy-Bird-4 adds the `Pipe` sprite to our game, rendering it an "infinite" number of times.
 
@@ -319,7 +319,7 @@ In the `render()` of `Scene.js`, we loop through the array and call each pipe's 
 pipes.forEach(pipe => pipe.render());
 ```
 
-## ✌ Flappy-Bird-5 ("The PipePair Update")
+## ✌ Flappy-Bird-5 (The "PipePair" Update)
 
 Flappy-Bird-5 spawns the `Pipe` sprites in "pairs", with one `Pipe` facing up and the other facing down.
 
@@ -420,7 +420,7 @@ One last important change is altering the position of our upper pipes since they
 this.y = orientation === 'top' ? y - this.height : y;
 ```
 
-## 🎯 Flappy-Bird-6 ("The Collision Update")
+## 🎯 Flappy-Bird-6 (The "Collision" Update)
 
 Flappy-Bird-6 introduces collision detection, pausing the game when a collision occurs.
 
@@ -461,7 +461,7 @@ if (this.paused) {
 }
 ```
 
-## 🤖 Flappy-Bird-7 ("The State Machine Update")
+## 🤖 Flappy-Bird-7 (The "State Machine" Update)
 
 Flappy-Bird-7 modularizes our code as a State Machine:
 
@@ -514,7 +514,7 @@ By representing our game states as classes, we vastly simplify the logic in our 
 
 Be sure to read carefully through the new classes, paying close attention to the comments, to understand how our `Game.js` has been simplified so cleanly! You should see that the `PlayState` should contain much of the logic previously in `Game.js`.
 
-## 💀 Flappy-Bird-8 ("The GameOver Update")
+## 💀 Flappy-Bird-8 (The "GameOver" Update)
 
 Flappy-Bird-8 introduces a new state, `GameOverState`, to help keep track of the score.
 
@@ -610,7 +610,7 @@ export default class GameOverState extends State {
 }
 ```
 
-## 🔢 Flappy-Bird-9 ("The Countdown Update")
+## 🔢 Flappy-Bird-9 (The "Countdown" Update)
 
 Flappy-Bird-9 introduces yet another state, `CountdownState`, whose purpose is to give the user time to get ready before being thrust into the game.
 
@@ -673,7 +673,7 @@ export default class CountdownState extends State {
 - In `PlayState.js`, we ensure that upon collision, we transition to `GameOverState`.
 - Finally, in `GameOverState.js`, we transition back to `CountdownState` on keyboard input.
 
-## 🔊 Flappy-Bird-10 ("The Audio Update")
+## 🔊 Flappy-Bird-10 (The "Audio" Update)
 
 Flappy-Bird-10 adds some music and sound effects to the game
 

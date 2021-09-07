@@ -51,7 +51,7 @@ Slightly different from the traditional coordinate system you might've used in M
 
 _Image courtesy of [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)._
 
-## 🌅 Pong-0 ("The Day-0 Update")
+## 🌅 Pong-0 (The "Day-0" Update)
 
 At this point, you will want to have downloaded the demo code in order to follow along. Be sure to pay attention to the comments in the code!
 
@@ -119,7 +119,7 @@ function render() {
 }
 ```
 
-## 🟪 Pong-1 ("The Rectangle Update")
+## 🟪 Pong-1 (The "Rectangle" Update)
 
 Pong-1 produces a more complete, albeit static image of what our Pong program should look like.
 
@@ -161,7 +161,7 @@ context.fillRect(canvas.width - 50, canvas.height - 230, 20, 200);
 
 As you can see, we are writing the score at the top of the screen, and drawing rectangles for the paddles and the ball. The paddles are positioned on opposing ends of the screen, and the ball in the center.
 
-## 🏓 Pong-2 ("The Paddle Update")
+## 🏓 Pong-2 (The "Paddle" Update)
 
 Pong-2 adds interactivity to the paddles by letting us move them up and down using the `w` and `s` keys for the left paddle, and the `up` and `down` keys for the right paddle.
 
@@ -211,7 +211,7 @@ else if (keys.ArrowDown) {
 
 Here, we've implemented a way for each player to move their paddle. Recall that our 2D coordinate system is centered at the top left of the screen. Therefore, in order for each paddle to move upwards, its Y position will need to be multiplied by negative velocity (and vice versa), which might seem counterintuitive at first glance, so be sure to take a moment to look at this carefully.
 
-## ⚾ Pong-3 ("The Ball Update")
+## ⚾ Pong-3 (The "Ball" Update)
 
 Pong-3 adds motion to the ball upon the user pressing enter.
 
@@ -298,7 +298,7 @@ context.fillRect(ballX, ballY, 20, 20);
 
 The only change of note is using the ball's position variables to draw the ball to the screen instead of the static values we had before. This will make it appear like the ball is travelling across the screen.
 
-## 📦 Pong-4 ("The Class Update")
+## 📦 Pong-4 (The "Class" Update)
 
 Pong-4 behaves exactly like Pong-3. The biggest advantage we gain from this update is in the design of our code. Open up Pong-4 to take a look at how we've reorganized the code using classes and objects.
 
@@ -330,7 +330,7 @@ The main takeaway from this update is that we now have abstracted away from `mai
 
 This not only gives us greater flexibility moving forward, it also makes our `main.js` file cleaner and more readable.
 
-## 🎯 Pong-5 ("The Collision Update")
+## 🎯 Pong-5 (The "Collision" Update)
 
 Pong-5 allows for the ball to bounce off the paddles and window boundaries. Open up Pong-5 to take a look at how we've incorporated AABB Collision Detection into our Pong program.
 
@@ -400,7 +400,7 @@ if (this.y >= this.canvasHeight - this.height) {
 }
 ```
 
-## 🚨 Pong-6 ("The Score Update")
+## 🚨 Pong-6 (The "Score" Update)
 
 Pong-6 allows us to keep track of the score.
 
@@ -421,7 +421,7 @@ else if (ball.x > CANVAS_WIDTH) {
 }
 ```
 
-## ↪️ Pong-7 ("The Serve Update")
+## ↪️ Pong-7 (The "Serve" Update)
 
 Pong-7 introduces a new state, "serve", to our game.
 
@@ -500,7 +500,7 @@ else if (gameState === 'victory') {
 }
 ```
 
-## 🔊 Pong-8 ("The Audio Update")
+## 🔊 Pong-8 (The "Audio" Update)
 
 Pong-8 adds sound to the game.
 

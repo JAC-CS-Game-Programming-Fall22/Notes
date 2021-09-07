@@ -27,14 +27,14 @@ _Image courtesy of [Wikipedia](https://en.wikipedia.org/wiki/Breakout_(video_gam
 
       ![Live Server](./images/Live-Server.png)
 
-   4. Once it's installed, click "Go Live" on the bottom right of the window. This should start the server and automatically open a new tab in your browser at `http://127.0.0.1:5500/` (don't worry if the port number is different).
+   4. Once it's installed, click "Go Live" on the bottom right of the window. This should start the server and automatically open a new tab in your browser at `http://127.0.0.1:5500/` (or whatever port it says on your machine).
       - The files the server serves will be relative to the directory you had open in VSC when you hit "Go Live".
 
 4. Alternatively, you can run the server manually without installing "Live Server":
    1. Open the VSC terminal (`` CTRL + ` ``) and run `npx http-server` (assuming you have NodeJS installed, if you don't, [download and install it from here](https://nodejs.org)) inside the root folder of the repo.
    2. In your browser, navigate to `http://localhost:8080` (or whatever the URL is that is displayed in the terminal).
 
-## 🌅 Breakout-0 ("The Day-0 Update")
+## 🌅 Breakout-0 (The "Day-0" Update)
 
 Breakout-0 displays the title screen and allows the user to toggle between the "Start" and "High Score" options.
 
@@ -60,7 +60,7 @@ Breakout-0 displays the title screen and allows the user to toggle between the "
 - Finally in `globals.js`, we initialize our `images` object. Notice that instead of declaring `new Image()` objects, we're now declaring `new Graphic()` objects. If you take a look in `Graphic.js`, you'll find a class that takes care of wrapping the JS image API. One advantage of doing this is so that we can declare our image's size and source at the same time, instead of doing it separately in `globals.js`. To see the difference, compare how we're declaring images in Flappy Bird.
 - Be sure to read through each file carefully so as to understand its role in the overarching project. The code itself should look familiar, but do take the time to familiarize yourself with the organizational layout.
 
-## 👾 Breakout-1 ("The Sprite Update")
+## 👾 Breakout-1 (The "Sprite" Update)
 
 Breakout-1 takes advantage of "sprite sheets" in order to render a paddle sprite during `PlayState`.
 
@@ -83,7 +83,7 @@ A Sprite Sheet is essentially an image containing smaller images (i.e. "sprites"
   - `update()` allows the user to pause the game and move the paddle.
   - `render()` calls the paddle's own `render()` method and also displays paused text if `this.paused` is true.
 
-## ⛹️‍♀️ Breakout-2 ("The Bounce Update")
+## ⛹️‍♀️ Breakout-2 (The "Bounce" Update)
 
 Breakout-2 uses AABB Collision Detection so that the ball can bounce when it collides with the paddle or the walls.
 
@@ -102,7 +102,7 @@ Breakout-2 uses AABB Collision Detection so that the ball can bounce when it col
   - `update()` calls the ball's update method and naively implements behavior for bouncing off the paddle. Can you think of a potential issue with our implementation? (Hint: think about what else we might want to do besides reversing the ball's velocity). You might be able to observe the issue by trying to bounce the ball off the paddle at an angle.
   - `render()` calls the ball's `render()` method.
 
-## 🧱 Breakout-3 ("The Brick Update")
+## 🧱 Breakout-3 (The "Brick" Update)
 
 Breakout-3 renders bricks onto the screen. It implements bouncing behavior for the ball upon a collision with a brick. It also fixes our previous naive implementation of bouncing behavior between the ball and the paddle.
 
@@ -177,7 +177,7 @@ This is a fairly simple collision algorithm, so it is not the most accurate, par
     this.dy *= 1.02;
     ```
 
-## 💜 Breakout-4 ("The Hearts Update")
+## 💜 Breakout-4 (The "Hearts" Update)
 
 Breakout-4 implements the idea of "health" for the user, which is displayed on the screen as hearts.
 
@@ -231,7 +231,7 @@ Breakout-4 implements the idea of "health" for the user, which is displayed on t
 - The score tracking can also be found in `PlayState::update()`, where we simply add 10 points to the score every time a ball/brick collision is detected.
 - `GameOverState.js`, which is unsurprisingly called when the user loses all health, simply renders a "Game Over" screen with the final score. When a user presses the enter key in this state, they're taken back to the `StartState`.
 
-## ⏩ Breakout-5 ("The Progression Update")
+## ⏩ Breakout-5 (The "Progression" Update)
 
 Breakout-5 updates the levels to include different colours and layouts of bricks. The player can now beat a level and progress to the next. We also now differentiate between the different tiers of bricks, making updates to the gameplay and the scoring as a result.
 
@@ -289,7 +289,7 @@ Breakout-5 updates the levels to include different colours and layouts of bricks
 
   - Notice that we're also passing the incremented level into `LevelMaker.createMap()` so that we can get higher tier bricks on higher levels.
 
-## 🎉 Breakout-6 ("The High Score Update")
+## 🎉 Breakout-6 (The "High Score" Update)
 
 Breakout-6 introduces the ability to add and view high scores. For our storage mechanism, since we're in the browser, we can use local storage. Local storage is a simple way to store small key/value pairs (kind of like cookies) for a particular domain on your browser. [Read more about local storage here](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage).
 
@@ -314,7 +314,7 @@ Breakout-6 introduces the ability to add and view high scores. For our storage m
 - In `EnterHighScoreState.js`, we allow users to enter their high scores by choosing a 3-character name. The name is selected by toggling the 3 characters using the `w`, `a`, `s`, `d` keys. We use ASCII values to implement this behavior.
   - Once the user settles on a name, we write their score to local storage using `HighScoreManager`, taking care to only store the top 10 scores.
 
-## 🤹‍♀️ Breakout-7 ("The Particle Update")
+## 🤹‍♀️ Breakout-7 (The "Particle" Update)
 
 Breakout-7 implements a rudimentary particle system to create a nicer visual effect when the ball collides with a brick. For a fantastic introduction to particles, [please watch this video from The Coding Train](https://youtu.be/syR0klfncCk).
 
@@ -325,7 +325,7 @@ Breakout-7 implements a rudimentary particle system to create a nicer visual eff
   - In `hit()`, we then use `colours` to set the colour when instantiating new particle objects.
   - In `update()` and `render()`, we make sure every particle gets updated and drawn to the screen according to each particle's individual `life` value.
 
-## 🏓 Breakout-8 ("The Paddle Select Update")
+## 🏓 Breakout-8 (The "Paddle Select" Update)
 
 Breakout-8 introduces a new state that allows the user to select a paddle skin before starting the game. As the final update, we're also adding music.
 
