@@ -1,3 +1,3 @@
-- [**0. 🏓 Pong**](0-Pong.md "🏓 Pong")
-- [**1. 🐤 Flappy Bird**](1-Flappy-Bird.md "🐤 Flappy Bird")
-- [**2. 🧱 Breakout**](2-Breakout.md "🧱 Breakout")
+- [**0. 🏓 Pong**](0-Pong/ "🏓 Pong")
+- [**1. 🐤 Flappy Bird**](1-Flappy-Bird/ "🐤 Flappy Bird")
+- [**2. 🧱 Breakout**](2-Breakout/ "🧱 Breakout")
