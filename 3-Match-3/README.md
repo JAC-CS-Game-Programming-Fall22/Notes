@@ -16,7 +16,7 @@ _Images courtesy of [Medium](https://medium.com/@john_23522/a-brief-history-of-m
 
 ## 🔨 Setup
 
-1. Clone the repo (or download the zip) for today's lecture, which you can find [here](https://github.com/JAC-CS-Game-Programming-F21/1-Flappy-Bird).
+1. Clone the repo (or download the zip) for today's lecture, which you can find [here](https://github.com/JAC-CS-Game-Programming-F21/3-Match-3).
 2. Open the repo in Visual Studio Code.
 3. Instead of running a server manually and having to refresh the browser tab every time you want to see your changes, you can now install Visual Studio Code's "Live Server" extension and have it all be taken care of for you:
    1. Click on the extensions icons in the left-hand side navigation.
