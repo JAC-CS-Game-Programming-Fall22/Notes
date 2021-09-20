@@ -8,23 +8,44 @@
 	<meta name="description" content="Description">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css"
+		title="docsify-darklight-theme" type="text/css" />
 </head>
 
 <body>
 	<div id="app"></div>
 	<script>
 		window.$docsify = {
-			name: '420-5P6 Game Programming',
+			name: 'Game Programming',
 			repo: 'https://github.com/JAC-CS-Game-Programming-F21',
-			coverpage: true,
 			loadSidebar: true,
 			subMaxLevel: 3,
+			search: 'auto',
+			// https://docsify-darklight-theme.boopathikumar.me/#/themeSupport
+			darklightTheme: {
+				siteFont: 'Source Sans Pro',
+				defaultTheme: 'dark',
+				codeFontFamily: 'Cascadia Code, Roboto Mono, Monaco, courier, monospace',
+				dark: {
+					'nomnoml-svg-stroke': 'white',
+				},
+				light: {
+					'nomnoml-svg-stroke': 'black',
+				}
+			}
 		}
 	</script>
 	<!-- Docsify v4 -->
 	<script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+	<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
 	<script src="//cdn.jsdelivr.net/npm/codeblock-iframe@latest/dist/index.min.js"></script>
 	<script src="//cdn.jsdelivr.net/npm/docsify-codeblock-iframe@latest/dist/index.min.js"></script>
+	<script src="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js"></script>
+	<script src="//cdn.jsdelivr.net/npm/graphre@0.1/dist/graphre.js"></script>
+	<script src="//cdn.jsdelivr.net/npm/nomnoml@1.4/dist/nomnoml.js"></script>
+	<script src="//cdn.jsdelivr.net/npm/docsify-nomnoml@1/dist/plugin.min.js"></script>
+	<script src="//unpkg.com/docsify-plantuml/dist/docsify-plantuml.min.js"></script>
+
 </body>
 
 </html>
