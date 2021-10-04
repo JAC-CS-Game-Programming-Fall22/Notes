@@ -19,3 +19,4 @@ Trust me 😉
 - [Harvard's CS50 Introduction to Game Development](https://cs50.harvard.edu/games/2018/)
 - [Game Programming Patterns](https://gameprogrammingpatterns.com)
 - [How to Make an RPG](https://howtomakeanrpg.com/)
+- [r/gamedev](https://www.reddit.com/r/gamedev)

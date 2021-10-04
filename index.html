@@ -10,6 +10,19 @@
 	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
 	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css"
 		title="docsify-darklight-theme" type="text/css" />
+
+	<style>
+		/* Center images */
+		img {
+			margin: 3rem auto;
+			display: flex;
+		}
+
+		/* Center PlantUML diagrams */
+		p[data-lang="plantuml"] {
+			text-align: center;
+		}
+	</style>
 </head>
 
 <body>
@@ -26,13 +39,16 @@
 				siteFont: 'Source Sans Pro',
 				defaultTheme: 'dark',
 				codeFontFamily: 'Cascadia Code, Roboto Mono, Monaco, courier, monospace',
-				dark: {
-					'nomnoml-svg-stroke': 'white',
-				},
-				light: {
-					'nomnoml-svg-stroke': 'black',
-				}
-			}
+				// dark: {
+				// 	'nomnoml-svg-stroke': 'white',
+				// },
+				// light: {
+				// 	'nomnoml-svg-stroke': 'black',
+				// }
+			},
+			plantuml: {
+				renderSvgAsObject: true,
+			},
 		}
 	</script>
 	<!-- Docsify v4 -->
@@ -41,9 +57,6 @@
 	<script src="//cdn.jsdelivr.net/npm/codeblock-iframe@latest/dist/index.min.js"></script>
 	<script src="//cdn.jsdelivr.net/npm/docsify-codeblock-iframe@latest/dist/index.min.js"></script>
 	<script src="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js"></script>
-	<script src="//cdn.jsdelivr.net/npm/graphre@0.1/dist/graphre.js"></script>
-	<script src="//cdn.jsdelivr.net/npm/nomnoml@1.4/dist/nomnoml.js"></script>
-	<script src="//cdn.jsdelivr.net/npm/docsify-nomnoml@1/dist/plugin.min.js"></script>
 	<script src="//unpkg.com/docsify-plantuml/dist/docsify-plantuml.min.js"></script>
 
 </body>
