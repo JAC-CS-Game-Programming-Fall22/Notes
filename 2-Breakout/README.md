@@ -14,7 +14,7 @@ Originally developed by Atari in 1976. An effective evolution of Pong, Breakout 
 
 ![Breakout](images/Breakout.png)
 
-_Image courtesy of [Wikipedia](https://en.wikipedia.org/wiki/Breakout_(video_game))_
+_Image from [Wikipedia](https://en.wikipedia.org/wiki/Breakout_(video_game))_
 
 ## 🔨 Setup
 

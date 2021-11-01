@@ -20,7 +20,7 @@ We are aiming to recreate "Pong"; a simple 2 player game in which one player has
 
 ![Pong](images/Pong.png)
 
-_Image courtesy of [Wikipedia](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Pong.png/480px-Pong.png)_
+_Image from [Wikipedia](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Pong.png/480px-Pong.png)_
 
 ## 🔨 Setup
 
@@ -39,7 +39,7 @@ A game, fundamentally, is an infinite loop, like a `while(true)`. During every i
 
 ![Game Loop](images/Game-Loop.png)
 
-_Image courtesy of [Game Programming Patterns](gameprogrammingpatterns.com/game-loop.html), where you can read more about game loops._
+_Image from [Game Programming Patterns](gameprogrammingpatterns.com/game-loop.html), where you can read more about game loops._
 
 ## 📉 2D Coordinate System
 
@@ -49,7 +49,7 @@ Slightly different from the traditional coordinate system you might've used in M
 
 ![Coordinate System](images/2D-Coordinate-System.png)
 
-_Image courtesy of [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)._
+_Image from [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)._
 
 ## 🌅 Pong-0 (The "Day-0" Update)
 

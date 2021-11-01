@@ -14,7 +14,7 @@ Flappy Bird is a mobile game by Dong Nguyen that went viral in 2013, utilizing a
 
 ![Flappy Bird](images/Flappy-Bird.png)
 
-_Image courtesy of [MacRumors](https://www.macrumors.com/2014/02/08/flappy-bird-removal/)_
+_Image from [MacRumors](https://www.macrumors.com/2014/02/08/flappy-bird-removal/)_
 
 ## 🔨 Setup
 
@@ -325,7 +325,7 @@ Flappy-Bird-5 spawns the `Pipe` sprites in "pairs", with one `Pipe` facing up an
 
 ![Pipe Pair](images/Pipe-Pair.png)
 
-_Image courtesy of [Harvard CS50](https://cs50.harvard.edu/games/2018/notes/1/#bird6-the-pipepair-update)_
+_Image from [Harvard CS50](https://cs50.harvard.edu/games/2018/notes/1/#bird6-the-pipepair-update)_
 
 ### Important Functions
 

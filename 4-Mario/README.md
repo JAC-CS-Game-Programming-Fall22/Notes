@@ -14,7 +14,7 @@ Super Mario Bros. was instrumental in the resurgence of video games in the mid-8
 
 ![Mario](./images/Mario.jpg)
 
-_Image courtesy of [Nintendo](https://mario.nintendo.com/history/)_
+_Image from [Nintendo](https://mario.nintendo.com/history/)_
 
 ## 🔨 Setup
 

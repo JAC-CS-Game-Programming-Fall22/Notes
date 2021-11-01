@@ -12,7 +12,7 @@ Match-3 has taken several forms over the years, with its roots in games like Tet
 
 ![The match 3 games Candy Crush and Bejeweled](./images/Match-3.png)
 
-_Images courtesy of [Medium](https://medium.com/@john_23522/a-brief-history-of-match-three-games-31233dcdfcc5)_
+_Images from [Medium](https://medium.com/@john_23522/a-brief-history-of-match-three-games-31233dcdfcc5)_
 
 ## 🔨 Setup
 
@@ -43,13 +43,13 @@ Match-3-0 builds the board and populates it with randomly generated tiles.
 
   ![DawnBringer's 32 Color Palette](./images/DawnBringer.png)
 
-    _Image courtesy of [PixelJoint](http://pixeljoint.com/forum/forum_posts.asp?TID=16247)_
+    _Image from [PixelJoint](http://pixeljoint.com/forum/forum_posts.asp?TID=16247)_
 
 - The idea behind using a palette is that it allows you to _dither_ (i.e., interleave two colours pixel by pixel to approximate another colour) such that your games can look like they use many colours, when in reality you only have a small set (in this case 32) available to you.
 
   ![Dithering](./images/Dithering.png)
 
-    _Image courtesy of [Wikipedia](https://en.wikipedia.org/wiki/Dither)_
+    _Image from [Wikipedia](https://en.wikipedia.org/wiki/Dither)_
 
 - When applied in the proper context, the difference between a dithered image and an image that actually uses hundreds of thousands of colours can be quite minimal:
 
@@ -73,7 +73,7 @@ Match-3-0 builds the board and populates it with randomly generated tiles.
 
   ![Mario/Luigi Colour Palettes](./images/Palette-Swap2.jpg)
 
-    _Image courtesy of [TodayIFoundOut](https://www.todayifoundout.com/index.php/2010/01/the-clouds-and-bushes-in-super-mario-bros-are-the-same/)_
+    _Image from [TodayIFoundOut](https://www.todayifoundout.com/index.php/2010/01/the-clouds-and-bushes-in-super-mario-bros-are-the-same/)_
 
 ### Code Restructuring
 
