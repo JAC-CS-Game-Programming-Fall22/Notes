@@ -1,0 +1,46 @@
+@startuml Pokemon User Interface
+
+skinparam monochrome true
+hide empty members
+
+class UserInterfaceElement {
+    position
+    dimensions
+}
+
+class Menu {
+    selection
+}
+
+class Panel {
+    isVisible
+    toggle()
+}
+
+class Selection {
+    items
+    currentSelection
+    navigateUp()
+    navigateDown()
+    select()
+}
+
+class Textbox {
+    fontSize
+    isAdvanceable
+    isClosed
+    pages
+    createPages()
+    next()
+    nextPage()
+    getLines()
+}
+
+UserInterfaceElement <|-- Panel
+UserInterfaceElement <|-- Selection
+Panel <|-- Menu
+Panel <|-- Textbox
+
+Selection "1 " --* Menu
+
+@enduml

@@ -5,3 +5,4 @@
 - [**4. 🏃🏽‍♂️ Mario**](4-Mario/ "🏃🏽‍♂️ Mario")
 - [**5. ⚔️ Zelda**](5-Zelda/ "⚔️ Zelda")
 - [**6. 🐦 Angry Birds**](6-Angry-Birds/ "🐦 Angry Birds")
+- [**7. ⚡ Pokemon**](7-Pokemon/ "⚡ Pokemon")
