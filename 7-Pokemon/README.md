@@ -459,8 +459,8 @@ In Pokémon-7, we add sounds, additional sprites, a `TitleScreenState`, and a `T
   - We call this state when exiting a battle in `BattleTurnState::exitBattle()`.
 - `./src/states/TitleScreenState.js`:
   - Consists of some text fields and a carousel of sprites that are displayed on the screen. There is then a fading transition to the next screen.
-  - Monitors whether the user has pressed the "enter" key (or "return" if on a Mac), and if so, pushes FadeInState onto the stack, which recall takes in a color table, duration, and callback function for when the transition is complete.
-  - Our callback function in this case takes care of cleaning up and pushing the next states onto the stack: first the `PlayState`, so that it is on the bottom of the Stack, then the `DialogueState`, so that rather than jumping head first into the game, the user can read some instructions, and lastly the FadeOutState to transition the screens nicely.
+  - Monitors whether the user has pressed Enter, and if so, calls `TransitionState::fade()` which takes a callback that gets executed halfway through the fade.
+  - The callback function in this case takes care of cleaning up and pushing the next states onto the stack: first the `PlayState`, so that it is on the bottom of the Stack, then the `DialogueState`, so that rather than jumping head first into the game, the user can read some instructions.
 
 ![Title](./images/Title.gif)
 
