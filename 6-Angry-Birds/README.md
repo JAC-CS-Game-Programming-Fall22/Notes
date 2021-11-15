@@ -516,7 +516,7 @@ In this update, we add sprites, sounds, fonts, and a little animation for the bi
   - If you enable `DEBUG` in `globals.js`, you'll see what I mean.
 - `./assets/`: You'll find sprites for the bird, pig, block, ground, background, slingshot, as well as the new fonts and sounds.
 - `./config.json` has been added as usual to load all the new assets.
-- The static `DIMENSIONS` property in our entities has now become `SPRITE_MEASUREMENTS` since we now need to keep track of where the sprites are in the spritesheet.
+- The static `DIMENSIONS` property in our entities has now become `SPRITE_MEASUREMENTS` since we now need to keep track of where the sprites are in the sprite sheet.
   - The sprites are extracted in `GameEntity.generateSprites()`:
 
     ```javascript
