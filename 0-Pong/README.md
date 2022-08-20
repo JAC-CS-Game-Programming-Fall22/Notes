@@ -2,7 +2,7 @@
 
 ## 🎯 Objectives
 
-- **HTML5 Canvas w/ JS**: This is the programming language that we'll be using throughout the course. You should be familiar with the HTML5 `<canvas>` element from Web I.
+- **HTML5 Canvas w/ JS**: This is the programming language that we'll be using throughout the course. We'll also learn about the [HTML `<canvas>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas).
 - **Drawing Shapes and Text**: Two of the most basic principles of game development, being able to draw shapes and text is what will allow us to render our game on a screen.
 - **DeltaTime and Velocity**: DeltaTime, arguably one of the most important variables that we keep track of in any game framework, is the time elapsed since the last frame of execution in our game. We'll see how this concept relates to velocity.
 - **Game State**: Every game is composed of a series of states (e.g., the title screen state, gameplay state, menu state, etc.), so it will be important to understand this concept since we'll want different rendering logic and update logic for each state.
@@ -77,14 +77,18 @@ Now, with these puzzle pieces in mind, you can see how we're rendering "Hello Po
 
 ### Important Code
 
-We initialize our game by grabbing the `canvas` element from the DOM located in `index.html` and getting the `context` object from it. Next, we set the width and height of the canvas. Finally, we declare `lastTime` which will be used to calculate delta time later on.
+We initialize our game by creating the `canvas` element and getting the `context` object from it. Next, we set the width and height of the canvas. Then, we have to append the canvas element to the DOM. Finally, we declare `lastTime` which will be used to calculate delta time later on.
 
 ```javascript
-const canvas = document.querySelector('canvas');
-const context = canvas.getContext('2d');
+const canvas = document.createElement('canvas');
+const context = canvas.getContext('2d') || new CanvasRenderingContext2D();
+const CANVAS_WIDTH = 1280;
+const CANVAS_HEIGHT = 720;
 
-canvas.width = 1280;
-canvas.height = 720;
+canvas.width = CANVAS_WIDTH;
+canvas.height = CANVAS_HEIGHT;
+
+document.body.appendChild(canvas);
 
 let lastTime = 0;
 ```
@@ -105,7 +109,7 @@ Next, we define `render()` so that we can specify the text we'd like to render t
 
 ```javascript
 function render() {
-    context.clearRect(0, 0, canvas.width, canvas.height);
+    context.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 
     context.font = "60px Comic Sans MS";
     context.fillStyle = "white";
@@ -113,15 +117,15 @@ function render() {
     context.textAlign = 'center';
     context.fillText(
         `Hello Pong!`,     // text to render
-        canvas.width / 2,  // X coordinate
-        canvas.height / 2, // Y coordinate
+        CANVAS_WIDTH / 2,  // X coordinate
+        CANVAS_HEIGHT / 2, // Y coordinate
     );
 }
 ```
 
 ## 🟪 Pong-1 (The "Rectangle" Update)
 
-Pong-1 produces a more complete, albeit static image of what our Pong program should look like.
+Pong-1 produces a more complete (static) image of what our Pong program should look like.
 
 ### Important Functions
 
@@ -151,12 +155,12 @@ This will allow us to create a custom font object (based off the font file we've
 The only other changes to the code in this update can be found in the `render()` function.
 
 ```javascript
-context.fillText(`${player1Score}`, canvas.width * 0.25, 50);
-context.fillText(`${player2Score}`, canvas.width * 0.75, 50);
+context.fillText(`${player1Score}`, CANVAS_WIDTH * 0.25, 50);
+context.fillText(`${player2Score}`, CANVAS_WIDTH * 0.75, 50);
 
-context.fillRect(canvas.width / 2 - 10, canvas.height / 2 - 10, 20, 20);
+context.fillRect(CANVAS_WIDTH / 2 - 10, CANVAS_HEIGHT / 2 - 10, 20, 20);
 context.fillRect(30, 30, 20, 200);
-context.fillRect(canvas.width - 50, canvas.height - 230, 20, 200);
+context.fillRect(CANVAS_WIDTH - 50, CANVAS_HEIGHT - 230, 20, 200);
 ```
 
 As you can see, we are writing the score at the top of the screen, and drawing rectangles for the paddles and the ball. The paddles are positioned on opposing ends of the screen, and the ball in the center.
@@ -482,8 +486,8 @@ When a player reaches the maximum score, the game state transitions to "victory"
 
 ```javascript
 else if (gameState === 'victory') {
-    context.fillText(`🎉 Player ${winningPlayer} wins! 🎉`, canvas.width / 2, canvas.height / 4);
-    context.fillText(`Press Enter to restart!`, canvas.width / 2, canvas.height / 4 + 40);
+    context.fillText(`🎉 Player ${winningPlayer} wins! 🎉`, CANVAS_WIDTH / 2, CANVAS_HEIGHT / 4);
+    context.fillText(`Press Enter to restart!`, CANVAS_WIDTH / 2, CANVAS_HEIGHT / 4 + 40);
 }
 ```
 

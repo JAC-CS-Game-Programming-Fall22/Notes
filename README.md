@@ -2,7 +2,7 @@
 
 In this repo you will find the notes for this course.
 
-You can view the pretty version of the notes [here](https://jac-cs-game-programming-f21.github.io/Notes).
+You can view the pretty version of the notes [here](https://jac-cs-game-programming-fall22.github.io/Notes).
 
 ## ✒️ Course Description
 
