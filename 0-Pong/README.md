@@ -68,7 +68,7 @@ For example, if our hardware runs at 3 frames per second, this means that in one
 
 ![3 frames per second](images/Delta-Time-3-FPS.png)
 
-In other words, we have 1 repaint (roughly) every 0.33 seconds. Our **delta time** in this case is 0.33 seconds.
+In other words, we have 1 repaint (roughly) every 0.33 seconds (1/3). Our **delta time** in this case is 0.33 seconds.
 
 One of the problems that **delta time** solves is making a game feel the same on different hardware.
 
