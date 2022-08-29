@@ -22,7 +22,7 @@ _Image from [Wikipedia](https://en.wikipedia.org/wiki/Breakout_(video_game))_
 
 ## 🔨 Setup
 
-1. Clone the repo (or download the zip) for today's lecture, which you can find [here](https://github.com/JAC-CS-Game-Programming-F21/1-Flappy-Bird).
+1. Clone the repo (or download the zip) for today's lecture, which you can find [here](https://github.com/JAC-CS-Game-Programming-Fall22/1-Breakout).
 2. Open the repo in Visual Studio Code.
 3. Start Visual Studio Code's "Live Server" extension. If you don't have it installed:
    1. Click on the extensions icons in the left-hand side navigation.

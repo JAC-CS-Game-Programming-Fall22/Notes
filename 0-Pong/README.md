@@ -24,7 +24,7 @@ _Image from [Wikipedia](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f
 
 ## 🔨 Setup
 
-1. Clone the repo (or download the zip) for today's lecture, which you can find [here](https://github.com/JAC-CS-Game-Programming-F21/0-Pong).
+1. Clone the repo (or download the zip) for today's lecture, which you can find [here](https://github.com/JAC-CS-Game-Programming-Fall22/0-Pong).
 2. Open the repo in Visual Studio Code.
 3. Start Visual Studio Code's "Live Server" extension. If you don't have it installed:
    1. Click on the extensions icons in the left-hand side navigation.
