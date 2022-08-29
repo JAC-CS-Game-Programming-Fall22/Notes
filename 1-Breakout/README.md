@@ -7,7 +7,6 @@
 - **State Machines**: Last week we used a rudimentary "state machine" for pong, which was really just a string variable and a few if statements in our love.update() function. This week we'll see how we can actually use a state machine class to allow us to transition in and out of different states more cleanly, and abstract this logic away from our main.js file and into separate classes.
 - **Procedural Layouts**: We'll take a look at how to dynamically generate bricks layouts so that no two levels are the same.
 - **Levels**: We'll introduce the concept of "levels" to our game, allowing a player to progress and change what we're displaying to the screen accordingly.
-- **Mouse Input**: Last week we worked with keyboard input for Pong, and this week we'll see how to process mouse input.
 - **Player Health**: We'll learn how to keep track of player "health" using hearts to give them a number of chances before losing the game.
 - **Collision Detection Revisited**: Collision detection will be a bit more advanced this week.
 - **Persistent Save Data**: In the context of high scores, it's useful to know how to save information relevant to our game so that the next time we open it, we can still access that old information.
