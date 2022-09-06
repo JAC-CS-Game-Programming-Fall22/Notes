@@ -77,6 +77,12 @@ A Sprite Sheet is essentially an image containing smaller images (i.e. "sprites"
 
 ![Breakout Sprite Sheet](./images/Sprite-Sheet.png)
 
+When an artist creates a sprite sheet, they usually do so with a _tile size_ in mind. This tile size is a pixel value that denotes the width and height of one tile in the sheet. Here's the same sprite sheet broken up into tiles:
+
+![Breakout Sprite Sheet Tiles](./images/Sprite-Sheet-Tiles.png)
+
+The _tile size_ of this particular sheet is `16` pixels. Meaning, each square above is `16` pixels wide by `16` pixels high. We can use this value to extract each individual sprite from the sheet in our code!
+
 ### Important Functions
 
 - `SpriteManager.generatePaddleSprites()`
@@ -86,6 +92,7 @@ A Sprite Sheet is essentially an image containing smaller images (i.e. "sprites"
 
 ### Important Code
 
+- `TILE_SIZE` is a constant declared in `globals.js` that defines the size of one tile in the sprite sheet. In this case, one "tile" is 16 pixels wide and 16 pixels tall.
 - `Paddle.js`
   - Contains all the updating and rendering logic for our paddle.
 - `PlayState.js`
