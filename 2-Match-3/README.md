@@ -167,7 +167,7 @@ Match-3-0
           TileColour.Blue,
           TileColour.Orange,
       ];
-      const patternRange = [0, 0];
+      const patternRange = [TilePattern.Flat, TilePattern.Flat];
       const tiles = [];
 
       for (let row = 0; row < Board.SIZE; row++) {
@@ -727,4 +727,3 @@ And with that, we have a fully functioning game of Match 3!
 ## 📚 References
 
 - [Harvard's CS50 Introduction to Game Development - Match 3](https://cs50.harvard.edu/games/2018/notes/3/)
-
