@@ -4,5 +4,5 @@
 - [**3. 🏃🏽‍♂️ Mario**](3-Mario/ "🏃🏽‍♂️ Mario")
 - [**4. ⚔️ Zelda**](4-Zelda/ "⚔️ Zelda")
 - [**5. 🐦 Angry Birds**](5-Angry-Birds/ "🐦 Angry Birds")
-<!-- - [**1. 🐤 Flappy Bird**](1-Flappy-Bird/ "🐤 Flappy Bird")
-- [**6. ⚡ Pokemon**](6-Pokemon/ "⚡ Pokemon") -->
+- [**6. ⚡ Pokemon**](6-Pokemon/ "⚡ Pokemon")
+<!-- - [**1. 🐤 Flappy Bird**](1-Flappy-Bird/ "🐤 Flappy Bird") -->
